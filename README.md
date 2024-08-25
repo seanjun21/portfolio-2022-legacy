@@ -3,11 +3,11 @@
 [![Build](https://github.com/EmaSuriano/gatsby-starter-mate/actions/workflows/master.yml/badge.svg)](https://github.com/EmaSuriano/gatsby-starter-mate/actions/workflows/master.yml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/f532a32d-4fc1-441d-aa28-cdc5e2c2e79c/deploy-status)](https://app.netlify.com/sites/gatsby-starter-mate/deploys)
 
-> Gatsby starter for [`gatsby-theme-mate`](https://github.com/EmaSuriano/gatsby-theme-mate). An accessible and fast portfolio starter for Gatsby integrated with Contentful CMS.
+> An accessible and fast portfolio starter for Gatsby integrated with Contentful CMS.
 
 The target audience are Developers 💻 and Tech Writers ✍️.
 
-**[Check the Demo ✨](https://gatsby-starter-mate.netlify.com/)**
+**[Check the Demo ✨](https://gatsby-starter-mate.netlify.app/)**
 
 ## Why? 🤔
 
@@ -19,16 +19,15 @@ At the same time, as this portfolio is written with Gatsby is extremely easy to 
 
 ## Features 🛠
 
-- [Gatsby 3](https://www.gatsbyjs.org/)
+- [Gatsby 5](https://www.gatsbyjs.org/)
 - [Rebass](https://rebassjs.org/): styled component system
 - [React Awesome Reveal](https://github.com/dennismorello/react-awesome-reveal)
-- Typescript
 - CMS Integration with [Contentful](https://contentful.com)
 - PWA ready
 - SEO
 - Responsive design
 - Icons from [font-awesome](https://fontawesome.com/)
-- [Netlify](https://www.netlify.com) Deployment Friendly
+- [Netlify](https://www.netlify.com) and [Gatsby Cloud](https://www.gatsbyjs.com/products/cloud/) Deployment Friendly
 - Medium integration
 - Social sharing (Twitter, Facebook, Google, LinkedIn)
 - Google Analytics integration
@@ -257,7 +256,3 @@ My final recommendation with shadowing is to try to keep as minimum as possible 
 ## Tracking with Google Analytics (Optional)
 
 This starter has the analytics plugin inside the `gatsby-config`, so the only need to do in order to enable it is to provide the `Tracking Id` for your site (starts with `UA-`). Just set a new variable inside your `.env` file called `ANALYTICS_ID` and analytics will be turn on automatically 😄
-
-## Contributing
-
-In case you want to add your contribution into this project, please refer to the [Gatsby Theme repository](https://github.com/EmaSuriano/gatsby-theme-mate) so then everybody using this starter will be able to get the changes.

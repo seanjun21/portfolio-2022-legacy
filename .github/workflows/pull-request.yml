@@ -1,14 +1,11 @@
-name: ci
+name: pull-request
 
-on: 
-  push:
-    branches:
-      - master
-      - main
+on: [pull_request]
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
 
@@ -17,6 +14,10 @@ jobs:
           node-version-file: '.nvmrc'
 
       - run: yarn install --frozen-lockfile
+
+      - run: yarn check-types
+
+      - run: yarn lint
 
       - run: yarn build
         env:

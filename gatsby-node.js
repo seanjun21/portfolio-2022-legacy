@@ -1,9 +1,17 @@
-// Fix to use process attr https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/#process-is-not-defined
+const gatsbySourceMedium = require('gatsby-source-medium/gatsby-node');
+const { createClient } = require('contentful');
 
-exports.onCreateWebpackConfig = ({ actions, stage, plugins }) => {
-  if (stage === 'build-javascript' || stage === 'develop') {
-    actions.setWebpackConfig({
-      plugins: [plugins.provide({ process: 'process/browser' })],
-    });
-  }
+const getAbout = (entry) => entry.sys.contentType.sys.id === 'about';
+
+exports.sourceNodes = async (gatsbyConfig, themeOptions) => {
+  const client = createClient({
+    space: process.env.SPACE_ID,
+    accessToken: process.env.ACCESS_TOKEN,
+  });
+
+  const { items } = await client.getEntries();
+  const about = items.find(getAbout);
+  const { mediumUser = '@medium' } = about.fields;
+
+  await gatsbySourceMedium.sourceNodes(gatsbyConfig, { username: mediumUser });
 };
